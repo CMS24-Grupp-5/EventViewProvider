@@ -14,7 +14,7 @@ public class EventFetchService
 
     public async Task<List<Event>> GetEventsAsync()
     {
-        var response = await _httpClient.GetAsync("https://localhost:7295/api/events");
+        var response = await _httpClient.GetAsync("https://eventprovider20250506133954.azurewebsites.net/api/Events");
         response.EnsureSuccessStatusCode();
 
         var stream = await response.Content.ReadAsStreamAsync();
